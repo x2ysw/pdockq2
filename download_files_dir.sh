@@ -5,7 +5,7 @@
 # ./download_files.sh
 
 # 定义CSV文件路径
-CSV_FILE="patch_random_100_batch_result_info.csv"
+CSV_FILE="info.csv"
 
 # 定义本地下载目录
 PDB_DOWNLOAD_DIR="pdb_download"
@@ -31,9 +31,9 @@ do
     JSON_FILE_PATH="$batch_result_dir/${JSON_FILE_NAME%.pdb}.json"
 
     # 下载PDB文件
-    scp zjlab@10.11.140.90:"$PDB_FILE_PATH" "$PDB_DOWNLOAD_DIR/"
+    scp user@example.com:"$PDB_FILE_PATH" "$PDB_DOWNLOAD_DIR/"
 
     # 下载JSON文件
-    scp zjlab@10.11.140.90:"$JSON_FILE_PATH" "$JSON_DOWNLOAD_DIR/"
+    scp user@example.com:"$JSON_FILE_PATH" "$JSON_DOWNLOAD_DIR/"
 
 done
